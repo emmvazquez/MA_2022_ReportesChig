@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".IndexFragment">
+
+    <SearchView
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="4dp"
+        android:background="#5CCAD0" />
+
+    <Button
+        android:id="@+id/btnExportXLS"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/xls"
+        android:textSize="10sp"
+        tools:ignore="RtlHardcoded,SmallSp,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnExportPDF"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/pdf"
+        android:textSize="10sp"
+        tools:ignore="RtlHardcoded,SmallSp,TouchTargetSizeCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp" />
+
+</FrameLayout>
