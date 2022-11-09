@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     tools:context=".CreateFragment">
 
     <TextView
@@ -97,7 +96,7 @@
                 android:inputType="number"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck"/>
+                tools:ignore="TextContrastCheck" />
 
             <EditText
                 android:id="@+id/etColonia"
@@ -112,7 +111,7 @@
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck"/>
+                tools:ignore="TextContrastCheck" />
 
             <EditText
                 android:id="@+id/etCalle1"
@@ -127,7 +126,7 @@
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck"/>
+                tools:ignore="TextContrastCheck" />
 
             <EditText
                 android:id="@+id/etCalle2"
@@ -142,43 +141,47 @@
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck"/>
+                tools:ignore="TextContrastCheck" />
 
-            <!--<Spinner
-                android:id="@+id/spinnerAge"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />-->
-
-            <EditText
-                android:id="@+id/etArea"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:ems="10"
-                android:hint="@string/ingrese_el_rea"
-                android:importantForAutofill="no"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck"/>
+                android:layout_marginTop="20dp">
 
-            <EditText
-                android:id="@+id/etProblema"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seleccione_el_rea"
+                    android:textSize="17dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:ems="10"
-                android:hint="@string/ingrese_su_problema"
-                android:importantForAutofill="no"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck"/>
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccione su Problema"
+                    android:textSize="18dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerProblem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+            </LinearLayout>
 
             <EditText
                 android:id="@+id/etDescripcion"
@@ -193,12 +196,17 @@
                 android:inputType="textMultiLine"
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
-                tools:ignore="TextContrastCheck"/>
+                tools:ignore="TextContrastCheck" />
+
+            <!--<Spinner
+                android:id="@+id/sEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />-->
 
             <Button
                 android:id="@+id/btnGuardar"
                 android:layout_width="120dp"
-                android:layout_height="40dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="260dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"

@@ -8,5 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="ETColor">#0A4447</color>
-    <color name="buttoncolor">#1F4547</color>
+    <color name="buttoncolor">#000000</color>
 </resources>

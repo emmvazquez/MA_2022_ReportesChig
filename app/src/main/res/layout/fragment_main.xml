@@ -4,53 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     tools:context=".MainFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/etUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-150dp"
+        android:ems="10"
+        android:hint="@string/usuario"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-50dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        tools:ignore="TextContrastCheck" />
+
     <Button
-        android:id="@+id/btnMainLogin"
+        android:id="@+id/btnMainHome"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
         android:background="@drawable/botontheme"
-        android:text="@string/acceder" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="200dp"
-        android:src="@drawable/logo" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="0dp"
-        android:text="@string/bienvenido"
-        android:textAlignment="center"
-        android:textSize="30sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:text="@string/por_favor_a_ade_un_reporte"
-        android:textAlignment="center"
-        android:textSize="30sp" />
+        android:text="@string/accesar" />
 
     <Button
-        android:id="@+id/btnMainAdd"
-        android:layout_width="100dp"
+        android:id="@+id/btnMainRegister"
+        android:layout_width="120dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
         android:layout_marginTop="250dp"
         android:background="@drawable/botontheme"
-        android:text="@string/a_adir" />
+        android:text="Registrarse" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-280dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo" />
 
 </FrameLayout>

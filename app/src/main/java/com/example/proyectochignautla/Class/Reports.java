@@ -1,20 +1,24 @@
-package com.example.proyectochignautla.adapters;
+package com.example.proyectochignautla.Class;
 
 public class Reports {
+    Integer id;
     String area;
     String problem;
     String created_at;
     String status;
-    int imagen;
 
 
-    public Reports(String area, String problem, String created_at, String status, int imagen) {
+    public Reports() {
+        this.id = id;
         this.area = area;
         this.problem = problem;
         this.created_at = created_at;
         this.status = status;
-        this.imagen = imagen;
     }
+
+    public Integer getId() { return id; }
+
+    public void setId(Integer id) { this.id = id; }
 
     public String getArea() { return area; }
 
@@ -31,9 +35,4 @@ public class Reports {
     public String getStatus() { return status; }
 
     public void setStatus(String status) { this.status = status; }
-
-    public int getImagen() { return imagen; }
-
-    public void setImagen(int imagen) { this.imagen = imagen; }
 }
-

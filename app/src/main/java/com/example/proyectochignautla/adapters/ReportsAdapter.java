@@ -12,23 +12,24 @@ import com.example.proyectochignautla.Class.Reports;
 import com.example.proyectochignautla.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class ReportsAdapter2 extends RecyclerView.Adapter<ReportsAdapter2.ViewHolder> {
-    ArrayList<Reports> ListaReportes;
+public class ReportsAdapter extends RecyclerView.Adapter<ReportsAdapter.ViewHolder> {
+    List<Reports> ListaReportes;
 
-    public ReportsAdapter2(ArrayList<Reports> listaReportes) {
+    public ReportsAdapter(List<Reports> listaReportes) {
         ListaReportes = listaReportes;
     }
 
     @NonNull
     @Override
-    public ReportsAdapter2.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ReportsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ReportsAdapter2.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ReportsAdapter.ViewHolder holder, int position) {
         holder.earea.setText(ListaReportes.get(position).getArea().toString());
         holder.eproblem.setText(ListaReportes.get(position).getProblem().toString());
         holder.estatus.setText(ListaReportes.get(position).getStatus().toString());

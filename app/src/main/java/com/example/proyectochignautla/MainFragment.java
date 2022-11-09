@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainFragment extends Fragment {
 
@@ -27,21 +28,27 @@ public class MainFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        Button btnMainLogin = view.findViewById(R.id.btnMainLogin);
-        Button btnMainAdd = view.findViewById(R.id.btnMainAdd);
 
-        btnMainLogin.setOnClickListener(new View.OnClickListener() {
+        EditText usuario = view.findViewById(R.id.etUser);
+        EditText contrasena = view.findViewById(R.id.etPassword);
+        Button btnMainHome = view.findViewById(R.id.btnMainHome);
+        Button btnMainRegister = view.findViewById(R.id.btnMainRegister);
+
+
+        btnMainHome.setOnClickListener(new View.OnClickListener() {
+
             @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_loginFragment);
+            public void onClick(View view){
+                Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_homeFragment);
             }
         });
 
-        btnMainAdd.setOnClickListener(new View.OnClickListener() {
+        btnMainRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_createFragment);
+                Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_recuperarFragment);
             }
         });
+
     }
 }

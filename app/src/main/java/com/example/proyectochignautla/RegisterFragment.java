@@ -70,9 +70,9 @@ public class RegisterFragment extends Fragment {
                 String eusuarioregistro = usuarioregistro.getText().toString();
                 String econtrasenaregistro = contrasenaregistro.getText().toString();
 
-                String url = "http://172.16.26.136/ejerciciopa/apiregistro.php?name=" + enombreregistro + "&fatherlastname=" + eapellidopaternoregistro +
+                String url = "http://192.168.137.48/ejerciciopa/apiregistro.php?name=" + enombreregistro + "&fatherlastname=" + eapellidopaternoregistro +
                         "&motherlastname=" + eapellidomaternoregistro + "&phonenumber=" + etelefonoregistro + "&email=" + ecorreoregistro +
-                        "&user==" + eusuarioregistro + "&pass=" + econtrasenaregistro;
+                        "&user=" + eusuarioregistro + "&pass=" + econtrasenaregistro;
 
                 JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                         Request.Method.GET, url, null,
@@ -96,7 +96,7 @@ public class RegisterFragment extends Fragment {
         regresarregistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_registerFragment_to_loginFragment);
+                Navigation.findNavController(view).navigate(R.id.action_registerFragment_to_mainFragment);
             }
         });
 

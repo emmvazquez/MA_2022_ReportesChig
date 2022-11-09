@@ -12,23 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONObject;
 
 public class LoginFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Toast.makeText(getActivity(), "Este apartado es unicamente para administradores", Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -44,12 +33,12 @@ public class LoginFragment extends Fragment {
 
         EditText usuario = view.findViewById(R.id.etUser);
         EditText contrasena = view.findViewById(R.id.etPassword);
-        Button btnLoginIndex = view.findViewById(R.id.btnLoginIndex);
+        Button btnLoginIndex = view.findViewById(R.id.btnMainHome);
         Button btnLoginMain = view.findViewById(R.id.btnLoginMain);
-        Button btnLoginRegister = view.findViewById(R.id.btnLoginRegister);
+        Button btnLoginRegister = view.findViewById(R.id.btnMainRegister);
 
 
-        btnLoginIndex.setOnClickListener(new View.OnClickListener() {
+        /*btnLoginIndex.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view){
@@ -69,7 +58,7 @@ public class LoginFragment extends Fragment {
             public void onClick(View view) {
                 Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_registerFragment);
             }
-        });
+        });*/
 
     }
 }
