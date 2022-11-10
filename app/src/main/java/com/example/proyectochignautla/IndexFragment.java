@@ -39,7 +39,6 @@ public class IndexFragment extends Fragment {
     ReportsAdapter reportsAdapter;
 
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +57,7 @@ public class IndexFragment extends Fragment {
         return vista;
     }
 
-    public void Data(){
+    public void Data() {
         RequestQueue requestQueue;
         requestQueue = Volley.newRequestQueue(getActivity());
         String url = "https://hostchignautla.000webhostapp.com/apiConsultar.php";
@@ -68,13 +67,13 @@ public class IndexFragment extends Fragment {
                 Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                Reports reports =null;
+                Reports reports = null;
                 JSONArray jsonArray = response.optJSONArray("reports");
                 try {
                     for (int i = 0; i < jsonArray.length(); i++) {
                         reports = new Reports();
                         JSONObject jsonObject = null;
-                        jsonObject  = jsonArray.getJSONObject(i);
+                        jsonObject = jsonArray.getJSONObject(i);
                         reports.setArea("Area: " + jsonObject.optString("area"));
                         reports.setProblem("Problema: " + jsonObject.optString("problem"));
                         reports.setStatus("Status: " + jsonObject.optString("status"));
@@ -98,10 +97,13 @@ public class IndexFragment extends Fragment {
 
 
     }
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstaState) {
 
 
-    }
+    /*public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstaState) {
+
+
+
+    }*/
 }
 
 

@@ -3,6 +3,7 @@ package com.example.proyectochignautla.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,6 +35,7 @@ public class ReportsAdapter extends RecyclerView.Adapter<ReportsAdapter.ViewHold
         holder.eproblem.setText(ListaReportes.get(position).getProblem().toString());
         holder.estatus.setText(ListaReportes.get(position).getStatus().toString());
         holder.ecreated_at.setText(ListaReportes.get(position).getCreated_at().toString());
+
     }
 
     @Override
@@ -41,6 +43,7 @@ public class ReportsAdapter extends RecyclerView.Adapter<ReportsAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView earea, eproblem, ecreated_at, estatus;
+        Button eshow;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -48,6 +51,8 @@ public class ReportsAdapter extends RecyclerView.Adapter<ReportsAdapter.ViewHold
             eproblem = (TextView) itemView.findViewById(R.id.problemaRC);
             ecreated_at = (TextView) itemView.findViewById(R.id.created_atRC);
             estatus = (TextView) itemView.findViewById(R.id.statusRC);
+            eshow = (Button) itemView.findViewById(R.id.btnShow);
+
         }
     }
 }
